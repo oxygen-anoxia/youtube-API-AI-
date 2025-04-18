@@ -1,15 +1,20 @@
-# youtube字幕自动获取和调用AI总结
+# youtube小工具
 
 ## 写在前面
 
-这是一个自动获取youtube的字幕，并且转换为文稿，并使用AI进行总结的脚本。  
+这是一个和youtube视频相关的小工具包，目前包括以下内容：
+1. 批量获取youtuber某个视频列表的所有视频的URL。
+2. 自动批量获取视频的字幕并进行AI分析。
 因为要学习一点东西的原因，我去youtube上找视频，但是目前的所有edge和google Chrome的插件都好像不太好使，于是一怒之下怒了一下，用GPT和ds搓了一个能总结视频的小玩意，大家可以用着玩玩，也可以提点修改建议。
 
 ## 如何使用
 
 首先配置python环境，还有下载各种包（除了头部import的包以外，还要下载一个yt_dlp包）
-然后你需要一个存储了你需要总结的youtube视频URL的txt文件，文件中每个URL按每一行存储。
-然后将文件youtube.py放置在一个文件夹下，你接下来要修改以下参数：
+1. 批量获取youtuber某个视频列表的所有视频的URL
+    你需要获取到一个含有列表键值的URL，最简单的方式是在页面中从播放列表的方式进入一个视频，检查你的URL中有没有"list="字样。运行getVideosInList.py，将URL输入到该程序中即可。视频的URL列表将存储在urls.txt文件中。
+2. 自动批量获取视频字幕并进行AI分析。
+   你需要一个存储了你需要总结的youtube视频URL的txt文件，文件中每个URL按每一行存储。
+   然后将文件youtube.py放置在一个文件夹下，你接下来要修改以下参数：
 ```py
     url_txt = #你存储URL的txt文件的位置(defalt:相同层的urls.txt文件)
     save_dir = #你存储字幕文件，字幕内容以及总结内容的文件夹（defalt：相同层下downloads文件夹内）
@@ -112,6 +117,6 @@ uipath is the most advanced RPA tool in uipath is the most advanced RPA tool in 
 
 ## 最后的最后
 
-总得来说希望能帮到大家，然后就是希望大家能多提点建议啥的，谢谢大家咯~
+总得来说希望能帮到大家，然后就是希望大家能多提点建议，要是觉得有帮到大家的话请打个星，谢谢大家咯~
 
 
